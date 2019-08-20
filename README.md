@@ -37,12 +37,12 @@ These methods are available for both local and platform actor runs.
 
 ## Uploading Multi-File Scrapy Spiders
 
-If your scrapy spider contains multiple files and/or you want to configure your scrapy settings, pipelines, middlewares, etc., you can very easily clone this actor and add in your multi-file scrapy spider. Here are instructions for how to do so:
+If your scrapy spider contains multiple files and/or you want to configure your scrapy settings, pipelines, middlewares, etc., you can very easily clone this actor and import your multi-file scrapy spider. Here are instructions for how to do so:
 
 1. Clone [this actor](https://github.com/vdrmota/actor-scrapy-executor) to your local workspace.
 2. Run `npm install`.
-3. Copy your spider(s) into the /actor/spiders/ directory.
-4. Make any changes to items.py, middlewares.py, pipelines.py, and/or settings.py in the /actor/ directory.
+3. Copy your spider(s) into the actor/spiders/ directory.
+4. Make any changes to items.py, middlewares.py, pipelines.py, and/or settings.py in the actor/ directory.
 5. Run `apify run`. That's it!
 
 You can also upload your actor to the Apify platform using `apify push`. Thereafter, you can run and scehdule your scrapy spider(s) on the Apify platform.
