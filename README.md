@@ -1,4 +1,4 @@
-# Scrapy Executor
+# Apify Scrapy Executor
 
 This actor allows you to run crawlers written in the [scrapy framework](https://scrapy.org) on the Apify platform. Executing a spider is as simple as copy-pasting your scrapy code into the actor's input. For multi-file scrapy spiders, see the bottom of this Readme.
 
