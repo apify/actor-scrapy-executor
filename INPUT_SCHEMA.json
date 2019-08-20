@@ -1,0 +1,22 @@
+{
+    "title": "Scrapy Actor",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "scrapyCode": {
+            "title": "Scrapy spider",
+            "type": "string",
+            "description": "Paste your scrapy spider here",
+            "prefill": "import scrapy\nimport apify\n \nclass MySpider(scrapy.Spider):\n \tname = 'apifySpider'\n \n \tdef start_requests(self):\n \t\turls = [\n \t\t\t'https://apify.com',\n \t\t\t'https://apify.com/store',\n \t\t]\n \t\tfor url in urls:\n \t\t\tyield scrapy.Request(url=url, callback=self.parse)\n \n \tdef parse(self, response):\n \t\turl = response.url\n \t\ttitle = response.css('title::text').get()\n \t\toutput = {\n \t\t\t'url': url,\n \t\t\t'title': title\n \t\t}\n \t\tapify.pushData(output)",
+            "editor": "python"
+        },
+        "proxyConfig": {
+            "title": "Proxy",
+            "type": "object",
+            "description": "Proxy servers let you bypass website protections, avoid IP address blocking and view content for other countries. Try to use the proxy if you are experiencing timeout errors.",
+            "default": {},
+            "editor": "proxy"
+        }
+    },
+    "required": ["scrapyCode"]
+}
