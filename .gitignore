@@ -4,3 +4,5 @@ crawls
 .DS_Store
 downloaded.tgz
 jobdir.tgz
+.vscode
+.eslintrc.json
