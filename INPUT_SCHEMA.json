@@ -6,7 +6,7 @@
         "scrapyCode": {
             "title": "Scrapy spider",
             "type": "string",
-            "description": "Paste your scrapy spider here. If your spider is separated into multiple files, see Readme for instructions.",
+            "description": "Paste your Python code with a Scrapy spider here. If your spider consists of multiple files, see readme for instructions.",
             "prefill": "import scrapy\nimport apify\n \nclass MySpider(scrapy.Spider):\n \tname = 'apifySpider'\n \n \tdef start_requests(self):\n \t\turls = [\n \t\t\t'https://apify.com',\n \t\t\t'https://apify.com/store',\n \t\t]\n \t\tfor url in urls:\n \t\t\tyield scrapy.Request(url=url, callback=self.parse)\n \n \tdef parse(self, response):\n \t\turl = response.url\n \t\ttitle = response.css('title::text').get()\n \t\toutput = {\n \t\t\t'url': url,\n \t\t\t'title': title\n \t\t}\n \t\tapify.pushData(output)",
             "editor": "python"
         },
