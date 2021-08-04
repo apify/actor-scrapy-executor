@@ -14,7 +14,7 @@
   "dependencies": {
     "apify": "^0.15.1",
     "await-exec": "^0.1.2",
-    "tar": "^4.4.10",
+    "tar": "^4.4.15",
     "tar-fs": "^2.0.0",
     "zip-folder": "^1.0.0"
   }
